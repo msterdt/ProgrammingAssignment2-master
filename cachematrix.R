@@ -8,11 +8,9 @@ makeCacheMatrix <- function(x = matrix()) {
         inv <<- solve(x)  ## cache the inverse of the matrix
 }
 
-
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
- 
-        message("Checking cache...")
+         message("Checking cache...")
         if(exists("inv")) {
                 message("Found it in cache...")
                 return(inv)   ## inv of the matrix was already cached.  Yeah!
